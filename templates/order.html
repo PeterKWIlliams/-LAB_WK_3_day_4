@@ -1,0 +1,23 @@
+
+<html>
+    <head>
+            
+    </head>
+            <title> Customer Order</title>
+               
+            <body>
+                <h1>Customer Orders: </h1>
+            <div>
+              {% for customer in customers[index] %}
+                
+              <p>
+                 
+                NO#<a>{{customer.order_num}}</a>
+                
+                </p>
+
+            
+            </div>
+            {% endfor%}
+            </body>
+</html>

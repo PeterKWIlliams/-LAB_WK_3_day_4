@@ -1,16 +1,19 @@
 <html>
     <head>
-        </head>
-            <title> {{}}-Customer Order}</title>
+        <link rel = stylesheet href = {{ url_for( 'static', filename = 'styles.css') }}>   
+    </head>
+            <title> Customer Order</title>
                
             <body>
-                <h1>Customer Order</h1>
+                <h1>Customer Orders:</h1>
             <div>
-               {% for customer in customers %}
+              {% for customer in customers %}
                 <p>
-                #{{customer.order_num}} {{customer.type}} {{customer.delivery}} 
-                
+                 Order NO#{{customer.order_num}}<br>{{customer.type}} Extras:{{customer.extra_toppings}}</br>{{customer.delivery}}<br>TOTAL:£{{customer.order_total}}</br>
                 </p>
-            </div>>
+
+            
+            </div>
+            {% endfor%}
             </body>
 </html>
